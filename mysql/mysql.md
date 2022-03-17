@@ -49,9 +49,28 @@ If you see a similar screen as shown below, then the server was successfully ins
 
 <img src="./mariadb_ubuntu_1604.webp">
 
-STep 6.Change authentication plugin to be able to login as normal user with root credentials.
+Step 6.Change authentication plugin to be able to login as normal user with root credentials.
 
     $ sudo mysql -u root
     UPDATE mysql.user SET plugin = 'mysql_native_password' WHERE User = 'root';
     FLUSH PRIVILEGES;
     QUIT;
+
+# MySql GUI -
+
+mriaddb (mysql) is not provide GUI interface so use DBeaver for handle Mysql database.
+
+## Step 1 -
+
+Download DBeaver from - [https://dbeaver.com/download/](https://dbeaver.com/download/).
+
+## Step 2 -
+
+Then install download file. if you download debin (.deb) file follow the command -
+Go to download file directory and depakedge & install
+
+    sudo dpkg -i /absolute/path/to/deb/file
+
+Like my case - 
+
+    sudo dpkg -i ./dbeaver-ce_22.0.0_amd64.deb
